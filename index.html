@@ -4,436 +4,967 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>대시보드</title>
+    <title>INDEX</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <script src="js/all.min.js"></script>
+    <!-- 구글폰트 -->
     <link
-      href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Noto+Serif+KR&display=swap"
+      href="https://fonts.googleapis.com/css?family=Gelasio|Noto+Sans+KR&display=swap"
       rel="stylesheet"
     />
     <style>
       /* CSS 코드 작성 */
       body {
-        font-family: "Libre Baskerville", "Noto Serif KR" serif;
-        font-weight: 800;
+        font-family: "Gelasio", serif;
+        font-weight: 600;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Noto Sans KR", sans-serif;
+        font-weight: 600;
+      }
+      .title-underline {
+        width: 200px;
+        height: 7px;
+        margin: 0 auto;
+      }
+      .vh-100 {
+        min-height: 100vh;
+      }
+
+      .height-80 {
+        min-height: 80vh;
+      }
+      .no-gutters {
+        margin-right: 0;
+        margin-left: 0;
+      }
+      #filler {
+        background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.1),
+            rgba(153, 204, 255, 0.6)
+          ),
+          url(img/filler.jpg);
+        background-size: cover;
       }
     </style>
   </head>
 
   <body>
-    <!-- 네비게이션 바 시작 -->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-      <!-- 네비게이션 안에 글자가 양 옆에 너무 붙지 말라고 컨테이너 넣어줌 -->
+    <!-- viewpoint는 항상 화면 사이즈와 관련(vw, vh) -->
+    <!-- 3-1 -->
+    <header id="header" class="bg-dark">
       <div class="container">
-        <a href="dashboard.html" class="navbar-brand text-warning"
-          ><i class="fab fa-battle-net"></i
-        ></a>
-        <button
-          class="navbar-toggler"
-          data-toggle="collapse"
-          data-target="#navbarCollapse"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- collapse 묶음 시작 -->
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <!-- 왼쪽 메뉴 -->
-          <ul class="navbar-nav">
-            <li class="nav-item px-2">
-              <a href="dashboard.html" class="nav-link active">대시보드</a>
-            </li>
-            <li class="nav-item px-2">
-              <a href="posts.html" class="nav-link">포스트</a>
-            </li>
-            <li class="nav-item px-2">
-              <a href="categories.html" class="nav-link">카테고리</a>
-            </li>
-            <li class="nav-item px-2">
-              <a href="users.html" class="nav-link">유저</a>
-            </li>
-          </ul>
-          <!-- 오른쪽 메뉴 -->
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown mr-3">
-              <a
-                href="#"
-                class="nav-link dropdown-toggle"
-                data-toggle="dropdown"
-              >
-                <i class="fas fa-user"></i>장태준
-              </a>
-              <div class="dropdown-menu">
-                <a href="profile.html" class="dropdown-item">
-                  <i class="fas fa-user-circle"></i>Profile
-                </a>
-                <a href="settings.html" class="dropdown-item">
-                  <i class="fas fa-cog"></i>Settings
-                </a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a href="login.html" class="nav-link">
-                <i class="fas fa-user-times"></i>Logout
-              </a>
-            </li>
-          </ul>
-          <!-- 오른쪽 메뉴 끝 -->
-        </div>
-        <!-- collapse 묶음 끝 -->
-      </div>
-      <!-- 컨테이너 끝 -->
-    </nav>
-    <!-- 최상단 검은 네브바 끝 -->
-    <!-- 헤더 시작 -->
-    <header
-      id="main-header"
-      class="py-2 text-white"
-      style="background-color: lightskyblue;"
-    >
-      <div class="container">
-        <div class="row">
-          <div class="col md-6">
-            <h1>
-              <i class="fas fa-cog"></i>
-              Dashboard
+        <div class="row vh-100 align-items-center">
+          <div class="col">
+            <h1 class="text-danger text-uppercase fontitalic">
+              <strong class="text-capitalize">my first bootstrap</strong>
+              <small class="text-light">website</small>
             </h1>
+            <p class="text-muted lead py-2 w-75">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
+              libero provident dicta, deserunt numquam perspiciatis aut maxime
+              facilis laborum delectus alias ullam architecto excepturi
+              necessitatibus, a corporis incidunt laudantium ad.
+            </p>
+            <a href="" class="btn btn-outline-warning btn-lg m-2 text-center text-capitalize"
+              >press here</a
+            >
+            <a href="" class="btn btn-outline-info btn-lg m-2 text-center text-capitalize"
+              >press here</a
+            >
           </div>
         </div>
       </div>
     </header>
-    <!-- 헤더 끝 -->
-    <!-- ACTIONS 시작 -->
-    <section id="actions" class="py-4 mb-4 bg-light">
+    <br /><br />
+
+    <!-- 3-2 -->
+    <section id="skills" class="py-5 bg-white">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-3">
-            <a
-              href="#"
-              class="btn btn-danger btn-block"
-              data-toggle="modal"
-              data-target="#addPostModal"
-              id="btn_1"
-            >
-              <i class="fas fa-plus"></i> Add Post
-            </a>
-          </div>
-          <div class="col-md-3">
-            <a
-              href="#"
-              class="btn btn-warning btn-block"
-              data-toggle="modal"
-              data-target="#addCategoryModal"
-              id="btn_2"
-            >
-              <i class="fas fa-plus"></i> Add Category
-            </a>
-          </div>
-          <div class="col-md-3">
-            <a
-              href="#"
-              class="btn btn-success btn-block"
-              data-toggle="modal"
-              data-target="#addUserModal"
-              id="btn_3"
-            >
-              <i class="fas fa-plus"></i> Add User
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- ACTIONC 끝 -->
-    <!-- 메인 배너 이미지 시작 -->
-    <div class="container mb-4">
-      <a href="file:///C:/Users/it/Desktop/web/example_1/index.html"
-        ><img
-          src="http://source.unsplash.com/random/1110x200"
-          alt="메인 사진"
-          style="border-radius: 5px;"
-        />
-      </a>
-    </div>
-    <!-- 메인 배너 이미지 끝 -->
-    <!-- POST 시작 -->
-    <section id="posts">
-      <div class="container">
+        <!-- 타이틀 -->
         <div class="row">
-          <!-- 왼쪽 col-9 -->
-          <div class="col-md-9">
-            <div class="card">
-              <div class="card-header">
-                <h4>최근 게시물</h4>
-              </div>
-              <table class="table table-striped">
-                <thead class="thead-dark">
-                  <tr>
-                    <th>#</th>
-                    <th>제목</th>
-                    <th>카테고리</th>
-                    <th>날짜</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Post One</td>
-                    <td>웹 개발</td>
-                    <td>2019. 12. 13</td>
-                    <td>
-                      <a href="details.html" class="btn btn-secondary">
-                        <i class="fas fa-angle-double-right"></i>열기
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Post Two</td>
-                    <td>자바</td>
-                    <td>2019. 12. 14</td>
-                    <td>
-                      <a href="details.html" class="btn btn-secondary">
-                        <i class="fas fa-angle-double-right"></i>열기</a
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Post Three</td>
-                    <td>웹 개발</td>
-                    <td>2019. 12. 15</td>
-                    <td>
-                      <a href="details.html" class="btn btn-secondary">
-                        <i class="fas fa-angle-double-right"></i>열기</a
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>Post Four</td>
-                    <td>파이썬</td>
-                    <td>2019. 12. 16</td>
-                    <td>
-                      <a href="details.html" class="btn btn-secondary">
-                        <i class="fas fa-angle-double-right"></i>열기</a
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td>Post Five</td>
-                    <td>SQL</td>
-                    <td>2019. 12. 17</td>
-                    <td>
-                      <a href="details.html" class="btn btn-secondary">
-                        <i class="fas fa-angle-double-right"></i>열기</a
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td>Post Six</td>
-                    <td>자바</td>
-                    <td>2019. 12. 18</td>
-                    <td>
-                      <a href="details.html" class="btn btn-secondary">
-                        <i class="fas fa-angle-double-right"></i>열기</a
-                      >
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <!-- 오른쪽 col-3 -->
-          <div class="col-md-3">
-            <div class="card text-center bg-primary text-white mb-3">
-              <div class="card-body">
-                <h3>Posts</h3>
-                <h4 class="display-4"><i class="fas fa-pencil-alt"></i> 6</h4>
-                <a href="posts.html" class="btn btn-outline-light btn-sm"
-                  >View</a
-                >
-              </div>
-            </div>
-            <div class="card text-center bg-success text-white mb-3">
-              <div class="card-body">
-                <h3>Categories</h3>
-                <h4 class="display-4"><i class="fas fa-folder"></i> 4</h4>
-                <a href="categories.html" class="btn btn-outline-light btn-sm"
-                  >View</a
-                >
-              </div>
-            </div>
-            <div class="card text-center bg-warning text-white mb-3">
-              <div class="card-body">
-                <h3>Users</h3>
-                <h4 class="display-4"><i class="fas fa-users"></i> 6</h4>
-                <a href="users.html" class="btn btn-outline-light btn-sm"
-                  >View</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- POST 끝 -->
-    <!-- FOOTER 시작 -->
-    <footer id="main-footer" class="bg-dark text-white mt-5 p-5">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <p class="lead text-center">
-              Dashboard&copy;
-              <span id="year"></span>
+          <div class="col text-center">
+            <h1 class="display-4 text-uppercase text-dark mb-0">
+              <strong>skills</strong>
+            </h1>
+            <div class="title-underline bg-danger"></div>
+            <p class="mt-2 text-capitalize text-muted">
+              Lorem ipsum dolor sit amet.
             </p>
           </div>
         </div>
+        <!-- 타이틀 끝 -->
+        <div class="row">
+          <!-- single col -->
+          <div class="col text-center my-4">
+            <i class="fab fa-node-js fa-5x text-danger"></i>
+            <h3 class="text-uppercase my-3">node.js</h3>
+            <p class="text-muted lead">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              facilis?
+            </p>
+            <a href="#" class="text-uppercase btn btn-outline-warning w-75"
+              >press here</a
+            >
+          </div>
+          <!-- single col 끝 -->
+        </div>
       </div>
-    </footer>
-    <!-- FOOTER 끝 -->
+    </section>
+    <br />
+    <hr style="border: 2px solid;" />
+    <br />
 
-    <!-- MODALS -->
-    <!-- ADD POST MODAL -->
-    <div class="modal fade" id="addPostModal">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header bg-danger text-whtie">
-            <h5 class="modal-title">Add Post</h5>
-            <button class="close" data-dismiss="modal">
-              <span>&times;</span>
-            </button>
+    <!-- 3-2-1 -->
+    <section id="skills" class="py-5 bg-dark">
+      <div class="container">
+        <div class="row align-items-center justify-content-center height-80">
+          <div class="col-12 text-center my-4">
+            <i class="fab fa-node-js fa-5x text-danger"></i>
+            <h3 class="text-uppercase my-3 text-white">node.js</h3>
+            <p class="text-muted lead">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              facilis?
+            </p>
+            <a href="#" class="text-uppercase btn btn-outline-warning w-100"
+              >press here</a
+            >
           </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="title">제목</label>
-                <input type="text" class="form-control" />
-              </div>
-              <div class="form-group">
-                <label for="category">카테고리</label>
-                <select class="form-control">
-                  <option value="">웹 개발</option>
-                  <option value="">자바</option>
-                  <option value="">SQL</option>
-                  <option value="">파이썬</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="image">이미지 업로드</label>
-                <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="image" />
-                  <label for="image" class="custom-file-label"
-                    >Choose File</label
-                  >
+          <div class="col-12 text-center my-4">
+            <i class="fab fa-html5 fa-5x text-danger"></i>
+            <h3 class="text-uppercase my-3 text-white">HTML</h3>
+            <p class="text-muted lead">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              facilis?
+            </p>
+            <a href="#" class="text-uppercase btn btn-outline-warning w-75"
+              >press here</a
+            >
+          </div>
+          <div class="col-12 text-center my-4">
+            <i class="fab fa-css3 fa-5x text-danger"></i>
+            <h3 class="text-uppercase my-3 text-white">CSS</h3>
+            <p class="text-muted lead">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              facilis?
+            </p>
+            <a href="#" class="text-uppercase btn btn-outline-warning w-50"
+              >press here</a
+            >
+          </div>
+          <div class="col-12 text-center my-4">
+            <i class="fab fa-js fa-5x text-danger"></i>
+            <h3 class="text-uppercase my-3 text-white">JS</h3>
+            <p class="text-muted lead">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              facilis?
+            </p>
+            <a href="#" class="text-uppercase btn btn-outline-warning w-25"
+              >press here</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <br />
+    <hr style="border: 2px solid;" />
+    <br />
+
+    <!-- 3-2-2 -->
+    <section id="skills" class="py-5 bg-white">
+      <div class="container">
+        <div class="row align-items-center height-80">
+          <div class="col-6 text-center my-4">
+            <i class="fab fa-node-js fa-5x text-danger"></i>
+            <h3 class="text-uppercase my-3">node.js</h3>
+            <p class="text-muted lead">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              facilis?
+            </p>
+            <a href="#" class="text-uppercase btn btn-outline-warning w-100"
+              >press here</a
+            >
+          </div>
+          <div class="col-6 text-center my-4">
+            <i class="fab fa-html5 fa-5x text-danger"></i>
+            <h3 class="text-uppercase my-3">HTML</h3>
+            <p class="text-muted lead">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              facilis?
+            </p>
+            <a href="#" class="text-uppercase btn btn-outline-warning w-75"
+              >press here</a
+            >
+          </div>
+          <div class="col-6 text-center my-4">
+            <i class="fab fa-css3 fa-5x text-danger"></i>
+            <h3 class="text-uppercase my-3">CSS</h3>
+            <p class="text-muted lead">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              facilis?
+            </p>
+            <a href="#" class="text-uppercase btn btn-outline-warning w-50"
+              >press here</a
+            >
+          </div>
+          <div class="col-6 text-center my-4">
+            <i class="fab fa-js fa-5x text-danger"></i>
+            <h3 class="text-uppercase my-3">JS</h3>
+            <p class="text-muted lead">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              facilis?
+            </p>
+            <a href="#" class="text-uppercase btn btn-outline-warning w-25"
+              >press here</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <br />
+    <hr style="border: 2px solid;" />
+    <br />
+
+    <!-- 3-2-3 -->
+    <section id="skills" class="py-5 bg-dark height-80 d-flex align-items-center">
+      <div class="container">
+        <!-- 타이틀 시작 -->
+        <div class="row">
+          <div class="col text-center">
+            <h1 class="display-4 text-uppercase text-dark mb-0">
+              <strong class="text-white">skills</strong>
+            </h1>
+            <div class="title-underline bg-danger"></div>
+            <p class="mt-2 text-capitalize text-muted">
+              Lorem ipsum dolor sit amet.
+            </p>
+          </div>
+        </div>
+        <!-- 타이틀 끝 -->
+        <div class="row">
+          <div class="col-md-6 col-lg-3 text-center my-4">
+            <i class="fab fa-node-js fa-5x text-danger"></i>
+            <h3 class="text-uppercase my-3 text-white">node.js</h3>
+            <p class="text-muted lead">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              facilis?
+            </p>
+            <a href="#" class="text-uppercase btn btn-outline-warning w-100"
+              >press here</a
+            >
+          </div>
+          <div class="col-md-6 col-lg-3 text-center my-4">
+            <i class="fab fa-html5 fa-5x text-danger"></i>
+            <h3 class="text-uppercase my-3 text-white">HTML</h3>
+            <p class="text-muted lead">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              facilis?
+            </p>
+            <a href="#" class="text-uppercase btn btn-outline-warning w-75"
+              >press here</a
+            >
+          </div>
+          <div class="col-md-6 col-lg-3 text-center my-4">
+            <i class="fab fa-css3 fa-5x text-danger"></i>
+            <h3 class="text-uppercase my-3 text-white">CSS</h3>
+            <p class="text-muted lead">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              facilis?
+            </p>
+            <a href="#" class="text-uppercase btn btn-outline-warning w-50"
+              >press here</a
+            >
+          </div>
+          <div class="col-md-6 col-lg-3 text-center my-4">
+            <i class="fab fa-js fa-5x text-danger"></i>
+            <h3 class="text-uppercase my-3 text-white">JS</h3>
+            <p class="text-muted lead">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              facilis?
+            </p>
+            <a href="#" class="text-uppercase btn btn-outline-warning w-25"
+              >press here</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <br />
+    <hr style="border: 2px solid;" />
+    <br /><br />
+
+    <!-- about 섹션 시작 -->
+    <section id="about" class="bg-info">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- 이미지와 텍스트 열 절반으로 MD 화면 기준 -->
+          <!-- 이미지 col -->
+          <div
+            class="col-md-6 about-picture height-80"
+            style="background: url(img/mainPic_2.jpg); background-size: cover; background-attachment: fixed; background-position: center right;"
+          ></div>
+          <!-- 텍스트 col -->
+          <!-- d-flex사용은 묶어준 부모클래스에서 사용 -->
+          <div
+            class="col-md-6 about-text height-80 px-5 d-flex align-items-center justify-content-center"
+          >
+            <!-- about text center -->
+            <div class="about-text-center">
+              <!-- 타이틀 시작 -->
+              <div class="row">
+                <div class="col text-center">
+                  <h1 class="display-4 text-uppercase text-dark mb-0">
+                    <strong>ABOUT</strong>
+                  </h1>
+                  <div class="title-underline bg-warning"></div>
+                  <p class="mt-2 text-capitalize text-muted">
+                    Lorem ipsum dolor sit amet.
+                  </p>
                 </div>
-                <small class="form-text text-muted">Max Size 3mb</small>
               </div>
-              <div class="form-group">
-                <label for="body">내용</label>
-                <textara name="editor1" class="form-control"></textara>
+              <!-- 타이틀 끝 -->
+              <!-- single item 시작 -->
+              <div class="checkbox-item d-flex mb-2">
+                <i
+                  class="fas fa-check fa-3x p-2 bg-warning mr-3 align-items-center"
+                ></i>
+                <div class="text-light lead">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
+                  voluptate?
+                </div>
               </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-danger" data-dismiss="modal">
-              저장하기
-            </button>
+              <!-- single item 끝 -->
+              <div class="checkbox-item d-flex mb-2">
+                <i
+                  class="fas fa-check fa-3x p-2 bg-warning mr-3 align-items-center"
+                ></i>
+                <div class="text-light lead">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Earum, laudantium!
+                </div>
+              </div>
+              <div class="checkbox-item d-flex mb-2">
+                <i
+                  class="fas fa-check fa-3x p-2 bg-warning mr-3 align-items-center"
+                ></i>
+                <div class="text-light lead">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laborum, voluptates.
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- ADD CATEGORY MODAL -->
-    <div class="modal fade" id="addCategoryModal">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header bg-warning text-white">
-            <h5 class="modal-title">Add Category</h5>
-            <button class="close" data-dismiss="modal">
-              <span>&times;</span>
-            </button>
+    </section>
+    <br /><br />
+
+    <!-- project 섹션 시작 -->
+    <section id="projects" class="py-5 bg-dark">
+      <div class="container">
+        <!-- 타이틀 시작 -->
+        <div class="row">
+          <div class="col text-center">
+            <h1 class="display-4 text-uppercase text-white mb-0">
+              <strong>PROJECTS</strong>
+            </h1>
+            <div class="title-underline bg-danger"></div>
+            </p>
           </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="title">제목</label>
-                <input type="text" class="form-control" />
+        </div>
+        <!-- 타이틀 끝 -->
+        <!-- 프로젝트 이미지 시작 -->
+        <div class="row py-3">
+          <div class="col-sm-6 col-md-4 my-3">
+            <img src="img/pro_1.jpg" alt="이미지 1" class="img-fluid rounded" />
+          </div>
+          <div class="col-sm-6 col-md-4 my-3">
+            <img
+              src="img/pro_2.jpg"
+              alt="이미지 2"
+              class="img-fluid img-thumbnail bg-success border border-success"
+            />
+          </div>
+          <div class="col-sm-6 col-md-4 my-3">
+            <img
+              src="img/pro_3.jpg"
+              alt="이미지 3"
+              class="img-fluid rounded-circle"
+            />
+          </div>
+        </div>
+
+        <div class="row py-3 no-gutters">
+          <div class="col-sm-6 col-md-4 my-3">
+            <img
+              src="img/pro_4.jpg"
+              alt="이미지 4"
+              class="img-fluid rounded "
+            />
+          </div>
+          <div class="col-sm-6 col-md-4 my-3">
+            <img
+              src="img/pro_5.jpg"
+              alt="이미지 5"
+              class="img-fluid rounded"
+            />
+          </div>
+          <div class="col-sm-6 col-md-4 my-3">
+            <img
+              src="img/pro_6.jpg"
+              alt="이미지 6"
+              class="img-fluid rounded"
+            />
+          </div>
+        </div>
+        <!-- 프로젝트 이미지 끝 -->
+      </div>
+    </section>
+    <!-- about 섹션 끝 -->
+    <br /><br />
+
+    <!-- Team 섹션 시작 -->
+    <section id="team" class="py-5 bg-light">
+      <div class="container">
+        <!-- 타이틀 시작 -->
+        <div class="row">
+          <div class="col text-center">
+            <h1 class="display-4 text-uppercase text-dark mb-0">
+              <strong>team</strong>
+            </h1>
+            <div class="title-underline bg-danger"></div>
+            <p class="mt-2 text-capitalize text-muted">
+              팀 멤버를 소개합니다.
+            </p>
+          </div>
+        </div>
+        <!-- 타이틀 끝 -->
+        <div class="row">
+          <!-- one member 시작 -->
+          <div class="col-md-6 col-lg-4 my-3">
+            <div class="card">
+              <img src="img/member_1.jpg" alt="member_1" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-capitalize">team member</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Officia, placeat.
+                </p>
+                <a href="#" class="btn btn-outline-danger text-uppercase"
+                  >press here</a
+                >
               </div>
-            </form>
+              <div
+                class="card-footer bg-secondary d-flex justify-content-between"
+              >
+                <a href=""
+                  ><i class="fab fa-facebook fa-2x text-dark mx-3"></i
+                ></a>
+                <a href=""
+                  ><i class="fab fa-twitter fa-2x text-dark mx-3"></i
+                ></a>
+                <a href=""
+                  ><i class="fab fa-youtube fa-2x text-dark mx-3"></i
+                ></a>
+                <a href=""
+                  ><i class="fab fa-google fa-2x text-dark mx-3"></i
+                ></a>
+              </div>
+            </div>
           </div>
-          <div class="modal-footer">
-            <button class="btn btn-warning" data-dismiss="modal">
-              저장하기
-            </button>
+          <!-- one member 끝 -->
+          <!-- two member 시작 -->
+          <div class="col-md-6 col-lg-4 my-3">
+            <div class="card">
+              <img src="img/member_2.jpg" alt="member_1" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-capitalize">team member</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
+                  vel? Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Adipisci, aspernatur. Lorem.
+                </p>
+                <a href="#" class="btn btn-outline-danger text-uppercase"
+                  >press here</a
+                >
+              </div>
+              <div
+                class="card-footer bg-secondary d-flex justify-content-between"
+              >
+                <a href=""
+                  ><i class="fab fa-facebook fa-2x text-dark mx-3"></i
+                ></a>
+                <a href=""
+                  ><i class="fab fa-twitter fa-2x text-dark mx-3"></i
+                ></a>
+                <a href=""
+                  ><i class="fab fa-youtube fa-2x text-dark mx-3"></i
+                ></a>
+                <a href=""
+                  ><i class="fab fa-google fa-2x text-dark mx-3"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- two member 끝 -->
+          <!-- three member 시작 -->
+          <div class="col-md-6 col-lg-4 my-3">
+            <div class="card">
+              <img src="img/member_3.jpg" alt="member_1" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-capitalize">team member</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Similique, error! Lorem ipsum dolor sit, amet consectetur
+                  adipisicing elit. Cum, consequatur. Lorem.
+                </p>
+                <a href="#" class="btn btn-outline-danger text-uppercase"
+                  >press here</a
+                >
+              </div>
+              <div
+                class="card-footer bg-secondary d-flex justify-content-between"
+              >
+                <a href=""
+                  ><i class="fab fa-facebook fa-2x text-dark mx-3"></i
+                ></a>
+                <a href=""
+                  ><i class="fab fa-twitter fa-2x text-dark mx-3"></i
+                ></a>
+                <a href=""
+                  ><i class="fab fa-youtube fa-2x text-dark mx-3"></i
+                ></a>
+                <a href=""
+                  ><i class="fab fa-google fa-2x text-dark mx-3"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- three member 끝 -->
+        </div>
+        <!-- four member 시작 -->
+        <div class="row">
+          <div class="col-md-6 col-lg-4 my-3 mx-auto">
+            <div class="card">
+              <img src="img/member_4.jpg" alt="member_1" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-capitalize">team member</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Similique, error!
+                </p>
+                <a href="#" class="btn btn-outline-danger text-uppercase"
+                  >press here</a
+                >
+              </div>
+              <div
+                class="card-footer bg-secondary d-flex justify-content-between"
+              >
+                <a href=""
+                  ><i class="fab fa-facebook fa-2x text-dark mx-3"></i
+                ></a>
+                <a href=""
+                  ><i class="fab fa-twitter fa-2x text-dark mx-3"></i
+                ></a>
+                <a href=""
+                  ><i class="fab fa-youtube fa-2x text-dark mx-3"></i
+                ></a>
+                <a href=""
+                  ><i class="fab fa-google fa-2x text-dark mx-3"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- four member 끝 -->
+          <!-- five member 시작 -->
+          <div class="col-md-6 col-lg-4 my-3 mx-auto">
+            <div class="card">
+              <img src="img/member_5.jpg" alt="member_1" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-capitalize">team member</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Similique, error!
+                </p>
+                <a href="#" class="btn btn-outline-danger text-uppercase"
+                  >press here</a
+                >
+              </div>
+              <div
+                class="card-footer bg-secondary d-flex justify-content-between"
+              >
+                <a href=""
+                  ><i class="fab fa-facebook fa-2x text-dark mx-3"></i
+                ></a>
+                <a href=""
+                  ><i class="fab fa-twitter fa-2x text-dark mx-3"></i
+                ></a>
+                <a href=""
+                  ><i class="fab fa-youtube fa-2x text-dark mx-3"></i
+                ></a>
+                <a href=""
+                  ><i class="fab fa-google fa-2x text-dark mx-3"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- five member 끝 -->
+        </div>
+      </div>
+    </section>
+    <!-- Team 섹션 끝 -->
+    <br /><br />
+
+    <!-- 캐로셀 섹션 시작 -->
+    <section id="carousel" class="py-5 bg-dark">
+      <div class="container">
+        <!-- 타이틀 시작 -->
+        <div class="row">
+          <div class="col text-center">
+            <h1 class="display-4 text-uppercase text-white mb-0">
+              <strong>carousel</strong>
+            </h1>
+            <div class="title-underline bg-danger"></div>
+            <p class="mt-2 text-capitalize text-muted lead">
+              Carousel을 소개합니다.
+            </p>
+          </div>
+        </div>
+        <!-- 타이틀 끝 -->
+        <div class="row">
+          <div class="col-md-10 mx-auto text center">
+            <div id="example" class="carousel slide" data-ride="carousel">
+              <!-- 인디케이터 시작 -->
+              <ul class="carousel-indicators">
+                <li class="active" data-target="example" data-slide-to="0"></li>
+                <li data-target="#example" data-slide-to="1"></li>
+                <li data-target="#example" data-slide-to="2"></li>
+                <li data-target="#example" data-slide-to="3"></li>
+              </ul>
+              <!-- 인디케이터 끝 -->
+              <!-- 슬라이드 이미지 시작 -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="img/slide_1.jpg"
+                    alt="슬라이드 1"
+                    class="d-block w-100"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="img/slide_2.jpg"
+                    alt="슬라이드 2"
+                    class="d-block w-100"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="img/slide_3.jpg"
+                    alt="슬라이드 3"
+                    class="d-block w-100"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="img/slide_4.jpg"
+                    alt="슬라이드 4"
+                    class="d-block w-100"
+                  />
+                </div>
+              </div>
+              <!-- 슬라이드 이미지 끝 -->
+              <!-- 화살표 버튼 시작 -->
+              <a
+                href="#example"
+                class="carousel-control-prev"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">이전</span>
+              </a>
+              <a
+                href="#example"
+                class="carousel-control-next"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">다음</span>
+              </a>
+              <!-- 화살표 버튼 끝 -->
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- ADD USER MODAL -->
-    <div class="modal fade" id="addUserModal">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header bg-success text-white">
-            <h5 class="modal-title">Add User</h5>
-            <button class="close" data-dismiss="modal">
-              <span>&times;</span>
-            </button>
+    </section>
+    <!-- 케로셀 섹션 끝 -->
+    <br /><br />
+
+    <!-- 필러 섹션 시작 -->
+    <section id="filler" class="p-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mx-auto text-center">
+            <h1 class="text-danger text-capitalize">
+              my first bootstrap website
+            </h1>
+            <p class="lead text-light">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+              ea officiis voluptas ab esse eius!
+            </p>
+            <a href="" class="btn btn-warning btn-lg m-2 text-capitalize"
+              >press here</a
+            >
           </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label>이름</label>
-                <input type="text" class="form-control" placeholder="홍길동" />
+        </div>
+      </div>
+    </section>
+    <!-- 필러 섹션 끝 -->
+    <br /><br />
+
+    <!-- 블로그 섹션 시작 -->
+    <section id="blog" class="p-5 bg-warning">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <!-- 타이틀  시작-->
+            <div class="row">
+              <div class="col text-center">
+                <h1 class="display-4 text-uppercase text-dark mb-0">
+                  <strong>blog</strong>
+                </h1>
+                <div class="title-underline bg-danger"></div>
+                <p class="mt-2 text-capitalize text-muted lead">
+                  My Blog
+                </p>
               </div>
-              <div class="form-group">
-                <label>이메일</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="hong@google.com"
+            </div>
+            <!-- 타이틀 끝 -->
+            <div class="row">
+              <div class="col-md-4">
+                <img
+                  src="img/blog_1.jpg"
+                  alt="블로그 1번 사진"
+                  class="img-fluid img-thumbnail"
                 />
+                <h2 class="my-3 text-danger text-capitalize">project 1</h2>
+                <p class="text-muted">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Unde, pariatur id! Alias eveniet, culpa, possimus doloribus
+                  saepe, sequi fugit recusandae illo placeat cumque suscipit!
+                  Est aliquid praesentium perspiciatis cupiditate molestias!
+                </p>
               </div>
-              <div class="form-group">
-                <label>비밀번호</label>
-                <input type="password" class="form-control" />
+              <div class="col-md-4">
+                <img
+                  src="img/blog_2.jpg"
+                  alt="블로그 2번 사진"
+                  class="img-fluid img-thumbnail border border-dark bg-dark mt-4"
+                />
+                <h2 class="my-3 text-danger text-capitalize">project 2</h2>
+                <p class="text-muted">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Unde, pariatur id! Alias eveniet, culpa, possimus doloribus
+                  saepe, sequi fugit recusandae illo placeat cumque suscipit!
+                  Est aliquid praesentium perspiciatis cupiditate molestias!
+                </p>
               </div>
-              <div class="form-group">
-                <label>비밀번호 확인</label>
-                <input type="password" class="form-control" />
+              <div class="col-md-4">
+                <img
+                  src="img/blog_3.jpg"
+                  alt="블로그 3번 사진"
+                  class="img-fluid img-thumbnail mt-5"
+                />
+                <h2 class="my-3 text-danger text-capitalize">project 3</h2>
+                <p class="text-muted">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Unde, pariatur id! Alias eveniet, culpa, possimus doloribus
+                  saepe, sequi fugit recusandae illo placeat cumque suscipit!
+                  Est aliquid praesentium perspiciatis cupiditate molestias!
+                </p>
               </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-success" data-dismiss="modal">
-              저장하기
-            </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+    <!-- 블로그 섹션 끝 -->
+    <br /><br />
+
+    <!-- 컨텍트 섹션 시작 -->
+    <section id="contact" class="py-5 bg-success">
+      <div class="container">
+        <!-- 타이틀 시작 -->
+        <div class="row">
+          <div class="col text-center">
+            <h1 class="display-4 text-uppercase text-light mb-0">
+              <strong>blog</strong>
+            </h1>
+            <div class="title-underline bg-danger"></div>
+            <p class="mt-2 text-capitalize text-muted lead">
+              동영상
+            </p>
+          </div>
+        </div>
+        <!-- 타이틀 끝 -->
+        <div class="row">
+          <!-- 로그인 폼 시작 -->
+          <div class="col-md-6 my-3">
+            <div class="card card-body bg-secondary">
+              <!-- 카드 타이틀 시작 -->
+              <div class="card-title text-center text-white">
+                <h2 class="text-capitalize">처음 오셨나요?</h2>
+                <p>로그인</p>
+              </div>
+              <!-- 카드 타이틀 끝 -->
+              <!-- input 폼 시작 -->
+              <form action="#">
+                <div class="from-group mt-3">
+                  <input
+                    id="name"
+                    type="text"
+                    class="form-control form-control-lg"
+                  />
+                </div>
+                <div class="from-group mt-3">
+                  <input
+                    id="eamil"
+                    type="email"
+                    class="form-control form-control-lg"
+                    placeholder="email"
+                  />
+                </div>
+                <div class="from-group mt-3">
+                  <input
+                    id="phone"
+                    type="tel"
+                    class="form-control form-control-lg"
+                    placeholder="phone"
+                  />
+                </div>
+                <!-- input group -->
+                <div class="input-group my-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">아이디</span>
+                  </div>
+                  <input id="group-username" type="text" class="form-control" />
+                </div>
+                <!-- 폰트 어썸 -->
+                <div class="input-group my-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="fas fa-user"></i>
+                    </span>
+                  </div>
+                  <input
+                    id="group-username-1"
+                    type="text"
+                    class="form-control"
+                    placeholder="이름"
+                  />
+                  <div class="input-group-append">
+                    <button type="button" class="btn btn-primary">
+                      로그인
+                    </button>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-outline-warning btn-block">
+                  가입하기
+                </button>
+              </form>
+              <!-- input 폼 끝 -->
+            </div>
+          </div>
+          <!-- 로그인 폼 끝 -->
+          <!-- 구글 맵 시작 -->
+          <div class="col-md-6 my-3">
+            <div class="embed-responsive embed-responsive-4by3">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/il81RJYBqyE"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <!-- 구글 맵 끝 -->
+        </div>
+      </div>
+    </section>
+    <!-- 컨텍트 섹션 끝 -->
+    <br /><br />
+
+    <!-- 리뷰 섹션 시작 -->
+    <section id="review" class="py-5 bg-info">
+      <div class="container">
+        <!-- 타이틀 시작 -->
+        <div class="row">
+          <div class="col text-center">
+            <h1 class="display-4 text-uppercase text-light mb-0">
+              <strong>review</strong>
+            </h1>
+            <div class="title-underline bg-danger"></div>
+            <p class="mt-2 lead text-dark lead" style="font-weight: 600;">
+              수고하셨습니다.
+            </p>
+          </div>
+        </div>
+        <!-- 타이틀 끝 -->
+        <div class="row">
+          <div class="col-md-6 my-4">
+            <img
+              src="img/review_1.jpg"
+              alt="리뷰 사진"
+              class="img-fluid rounded-circle d-none d-md-block"
+            />
+          </div>
+          <div class="col-md-6 my-4">
+            <blockquote class="blockquote text-right">
+              <p>
+                <i class="fa fa-quote-left fa-2x mr-3"></i>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Cupiditate qui obcaecati doloremque nesciunt saepe praesentium
+                eius aut, sed molestiae recusandae officiis consectetur,
+                dignissimos facilis aspernatur rem quaerat dolorem corporis
+                accusamus eum! Quod sit in tempore fugit. Veritatis nostrum eum
+                explicabo aliquid sed quod culpa a, architecto temporibus illum.
+                Blanditiis rem ad quia nisi modi porro maxime officiis, aliquid
+                quidem necessitatibus ratione perferendis ipsam vel sed,
+                doloremque commodi aspernatur itaque asperiores. Sed quibusdam
+                provident reprehenderit! Ducimus doloremque cupiditate deserunt,
+                aliquid mollitia iure omnis eos tempora fugit accusantium
+                eligendi fugiat. Delectus sequi veniam cumque fugit
+                exercitationem iure cupiditate, consectetur totam quidem amet!
+              </p>
+              <footer class="blockquote-footer text-left ml-5 text-capitalize">
+                master coder
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 리뷰 섹션 끝 -->
+
     <!-- jQuery , bundle.js -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <!-- CKEditor -->
-    <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
-
     <script>
       // 자바스크립트 코드 작성
-      CKEDITOR.replace("editor1");
-
-      /* 바깥 회색 클릭 시 꺼지지 않게 하기 */
-      $(document).ready(function() {
-        $("#btn_1").click(function() {
-          $("#addPostModal").modal({ backdrop: "static" });
-        });
-        $("#btn_2").click(function() {
-          $("#addCategoryModal").modal({ backdrop: "static" });
-        });
-        $("#btn_3").click(function() {
-          $("#addUserModal").modal({ backdrop: "static" });
-        });
-      });
     </script>
   </body>
 </html>
